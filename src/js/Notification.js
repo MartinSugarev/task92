@@ -23,8 +23,9 @@ export default class Notification {
     if(type === 'hawaiian'){
         isTrue = true
     }
+    let el = classNames('notification', `type-${type}`, {'is-danger': isTrue})
     const template = `
-<div class="${classNames('notification', `type-${type}`, {'is-danger': isTrue})}">
+<div class="${el}">
   <button class="delete"></button>
   🍕 <span class="type">${type}</span> (<span class="price">${formatCurrency(price)}</span>) has been added to your order.
 </div>
@@ -33,9 +34,13 @@ export default class Notification {
     this.container.innerHTML = template;
     this.notification.appendChild(this.container)
 
-    document.querySelector(".delete").addEventListener('click', () => {
-      console.log(document.querySelector(".notifications"));
-         
+    this.container.addEventListener('click', () => {
+      this.container.innerHTML = ''
+       // let a = document.querySelector(".notification-container")
+     // let el = classNames('notification', `type-${type}`, {'is-danger': isTrue})
+     // console.log(a);
+     console.log(type);
+     
          
          
     })
