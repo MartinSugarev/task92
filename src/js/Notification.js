@@ -1,4 +1,4 @@
-let { formatCurrency }  = require('./utils')
+import { formatCurrency }from './utils.js'
 import classNames from 'classnames'
 //import formatCurrency from './utils'
 
