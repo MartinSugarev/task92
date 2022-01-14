@@ -67,6 +67,8 @@
   },
   "target": "web",
   "dependencies": {
-    "eventemitter3": "^4.0.7"
+    "classnames": "^2.3.1",
+    "eventemitter3": "^4.0.7",
+    "format-currency": "^1.0.0"
   }
 }
